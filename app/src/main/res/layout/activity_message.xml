@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#c3e6da">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <EditText
+            android:id="@+id/txtMessage"
+            android:layout_width="279dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toStartOf="@+id/btnSend"
+            android:layout_toLeftOf="@+id/btnSend"
+            android:ems="10"
+            android:background="@drawable/corners"
+            android:hint="Type here" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="105dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/corners_button"
+            android:onClick="onClickBtnSend"
+            android:text="SEND"
+            android:textColor="#FFFFFF" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/txtMessage"
+            android:layout_marginBottom="7dp"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            android:background="#c3e6da"></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+</LinearLayout>
