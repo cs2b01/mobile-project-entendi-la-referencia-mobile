@@ -13,13 +13,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MyMessageAdapter extends RecyclerView.Adapter<MyMessageAdapter.ViewHolder> {
+public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ViewHolder> {
 
     public JSONArray elements;
     private Context mContext;
     private int userFromId;
 
-    public MyMessageAdapter(JSONArray elements, Context mContext, int userFromId) {
+    public ProfileAdapter(JSONArray elements, Context mContext, int userFromId) {
         this.elements = elements;
         this.mContext = mContext;
         this.userFromId = userFromId;
@@ -40,16 +40,16 @@ public class MyMessageAdapter extends RecyclerView.Adapter<MyMessageAdapter.View
 
     @NonNull
     @Override
-    public MyMessageAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ProfileAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(
                 parent.getContext()).inflate(
                 R.layout.message_view, parent, false
         );
-        return new MyMessageAdapter.ViewHolder(view);
+        return new ProfileAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyMessageAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ProfileAdapter.ViewHolder holder, int position) {
         try{
             holder.setIsRecyclable(false);
             JSONObject element = elements.getJSONObject(position);

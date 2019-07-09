@@ -57,7 +57,7 @@ public class Backup_Contacts extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray data = response.getJSONArray("data");
-                            mAdapter = new ChatAdapter(data, getActivity(), userId);
+                            //mAdapter = new RankingsAdapter(data, getActivity(), userId);
                             mRecyclerView.setAdapter(mAdapter);
 
                         }catch (JSONException e) {

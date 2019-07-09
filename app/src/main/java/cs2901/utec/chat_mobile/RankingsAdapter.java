@@ -15,15 +15,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
+public class RankingsAdapter extends RecyclerView.Adapter<RankingsAdapter.ViewHolder> {
     public JSONArray elements;
     private Context context;
-    public String userFromId;
 
-    public ChatAdapter(JSONArray elements, Context context, String userFromId){
+    public RankingsAdapter(JSONArray elements, Context context){
         this.elements = elements;
         this.context = context;
-        this.userFromId = userFromId;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -40,32 +38,31 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
     @NonNull
     @Override
-    public ChatAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RankingsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.element_view,parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ChatAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RankingsAdapter.ViewHolder holder, int position) {
         try {
             JSONObject element = elements.getJSONObject(position);
-            String name = element.getString("name")+" "+element.getString("fullname");
+            String name = element.getString("name")+" "+element.getString("lastname");
             final String username = element.getString("username");
             final String id = element.getString("id");
             holder.first_line.setText(name);
             holder.second_line.setText(username);
+            //holder.container.setOnClickListener(new View.OnClickListener(){
 
-            holder.container.setOnClickListener(new View.OnClickListener(){
 
-                @Override
-                public void onClick(View v) {
-                    Intent goToMessage = new Intent(context,MessageActivity.class);
-                    goToMessage.putExtra("user_from_id",userFromId);
-                    goToMessage.putExtra("user_to_id",id);
-                    goToMessage.putExtra("username", username);
-                    context.startActivity(goToMessage);
-                }
-            });
+                //@Override public void onClick(View v) {
+                    //Intent goToMessage = new Intent(context,ProfileActivity.class);
+                    //goToMessage.putExtra("user_from_id",userFromId);
+                    //goToMessage.putExtra("user_to_id",id);
+                    //goToMessage.putExtra("username", username);
+                    //context.startActivity(goToMessage);
+                //}
+            //});
 
 
         } catch (JSONException e) {

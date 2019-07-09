@@ -34,8 +34,42 @@ public class MenuActivity extends AppCompatActivity {
         super.onResume(); }
 
 
+        public void Jugarx(View v) {
+        Jugar();
+    }
+
     public void Jugar(){
-        Intent intent = new Intent(getActivity(), MenuActivity.class);
+        Intent intent = new Intent(getActivity(), JugarActivity.class);
+        intent.putExtra("user_id", getIntent().getExtras().get("user_id").toString());
+        intent.putExtra("username", getIntent().getExtras().get("username").toString());
+        startActivity(intent);
+    }
+
+    public void Rankingsx(View v) {
+        Rankings();
+    }
+    public void Rankings(){
+        Intent intent = new Intent(getActivity(), RankingsActivity.class);
+        intent.putExtra("user_id", getIntent().getExtras().get("user_id").toString());
+        intent.putExtra("username", getIntent().getExtras().get("username").toString());
+        startActivity(intent);
+    }
+
+    public void Settingsx(View v) {
+        Settings();
+    }
+    public void Settings(){
+        Intent intent = new Intent(getActivity(), SettingsActivity.class);
+        intent.putExtra("user_id", getIntent().getExtras().get("user_id").toString());
+        intent.putExtra("username", getIntent().getExtras().get("username").toString());
+        startActivity(intent);
+    }
+
+    public void Subircontenidox(View v) {
+        Subircontenido();
+    }
+    public void Subircontenido(){
+        Intent intent = new Intent(getActivity(), SubirContenidoActivity.class);
         intent.putExtra("user_id", getIntent().getExtras().get("user_id").toString());
         intent.putExtra("username", getIntent().getExtras().get("username").toString());
         startActivity(intent);
