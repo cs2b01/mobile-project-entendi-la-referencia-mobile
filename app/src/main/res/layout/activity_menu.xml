@@ -4,11 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background1"
     tools:context="cs2901.utec.chat_mobile.MenuActivity">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/main_recycler_view"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_width="match_parent">
-    </android.support.v7.widget.RecyclerView>
+        android:orientation="vertical">
+        <LinearLayout
+            android:paddingTop="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+            android:gravity="center"
+            android:id="@+id/username_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFC312"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="@drawable/corners_username"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="350sp">
+
+            <Button
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corners_buttons"
+                android:gravity="center"
+                android:text="Jugar"
+                android:textAlignment="center"
+                android:textColor="#FFC312"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginRight="30dp"/>
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corners_buttons"
+                android:gravity="center"
+                android:text="Subir contenido"
+                android:textAlignment="center"
+                android:textColor="#FFC312"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="50sp">
+
+            <Button
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corners_buttons"
+                android:gravity="center"
+                android:text="Rankings"
+                android:textAlignment="center"
+                android:textColor="#FFC312"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginRight="30dp"/>
+            <Button
+                android:layout_width="180sp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corners_buttons"
+                android:gravity="center"
+                android:text="Configuración"
+                android:textAlignment="center"
+                android:textColor="#FFC312"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
 </android.support.constraint.ConstraintLayout>

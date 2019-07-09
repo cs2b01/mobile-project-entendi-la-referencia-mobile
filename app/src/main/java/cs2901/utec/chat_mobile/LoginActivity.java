@@ -67,14 +67,13 @@ public class LoginActivity extends AppCompatActivity {
                     try {
                         String message = response.getString("message");
                         if(message.equals("Authorized")) {
-                            showMessage("Logged!");
                             Intent intent = new Intent(getActivity(), MenuActivity.class);
                             intent.putExtra("user_id", response.getInt("user_id"));
                             intent.putExtra("username", response.getString("username"));
                             startActivity(intent);
                         }
                         else {
-                            showMessage("Wrong username or password");
+                            showMessage("Contraseña incorrecta");
                         }
                     }catch (Exception e) {
                         e.printStackTrace();
@@ -87,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                 public void onErrorResponse(VolleyError error) {
                     error.printStackTrace();
                     if( error instanceof  AuthFailureError ){
-                        showMessage("Unauthorized");
+                        showMessage("Contraseña incorrecta");
                     }
                     else {
                         showMessage(error.getMessage());
