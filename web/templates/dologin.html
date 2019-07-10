@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  	<meta charset="utf-8">
+  	<title>Ingresa</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/static/css/login.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  	<script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery-3.1.0.min.js"%3E%3C/script%3E'))</script>
+	<link rel="icon" href="/static/images/ico.png">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Ingresa para aprender referencias todo el día!</h3>
+			</div>
+			<div class="card-body">
+				<form autocomplete="off">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="email" id="email" name="email" class="form-control" placeholder="Ingresa tu correo">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" id="password"  name="password" class="form-control" placeholder="Ingresa tu contraseña">
+					</div>
+					<div class="form-group">
+						<label id="Incorrecta" STYLE="Display:none">Contraseña incorrecta!</label>
+						<input type="button" value="Ingresa" onclick="getData()" class="btn float-right login_btn">
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					No tienes una cuenta?
+				</div>
+			<br>
+				 <div class="form-group">
+						<input type="button" onclick="Register()" value="Regístrate" class="btn float-right login_btn">
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<script>function getData(){
+        var email = $('#email').val();
+        var password = $('#password').val();
+        var message = JSON.stringify({
+                "email": email,
+                "password": password
+            });
+
+        $.ajax({
+            url:'/authenticate',
+            type:'POST',
+            contentType: 'application/json',
+            data : message,
+            dataType:'json',
+            success: function(response){
+            	window.location.href="http://3.130.238.73/main_menu"
+                },
+            error: function(response){
+                if(response['status']==401){
+                	$('#Incorrecta').show();
+                    }
+                 else{
+                window.location.href="http://3.130.238.73/main_menu"
+                  }}
+        });
+    }
+</script>
+<script>function Register(){
+                window.location.href="http://3.130.238.73/register"
+    }</script>
+
+</body>
+
+</html>

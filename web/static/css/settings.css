@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image:url("/static/images/registerwp.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+#Ocupado{
+    font-weight: bold;
+    color:red;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 490px;
+margin-top: auto;
+margin-bottom: auto;
+width: 450px;
+    alignment: center;
+    align-content: center;
+background-color: rgba(0,0,0,0.75) !important;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+#borrador{
+margin: auto;
+width: auto;
+    color:white;
+    font-weight: bold;
+background-color: red;
+ }
+#actualizador{
+    font-weight: bold;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: #FFC312;
+font-weight: bold;
+
+}
+#Incorrecta{
+    font-weight: bold;
+    color:red;
+}
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #FFC312;
+color: black;
+border:1px !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: #FFC312;
+    font-size: 20px;
+    font-weight:bold ;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+#success{
+    color:#FFC312;
+    font-weight: bold;
+}

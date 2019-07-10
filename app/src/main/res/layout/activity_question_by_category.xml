@@ -35,6 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Enunciado"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:background="@drawable/corners_buttons_w"
                 android:textColor="#FFF" />
@@ -63,6 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Respuesta correcta"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:background="@drawable/corners_buttons_w"
                 android:textColor="#FFF"  />
