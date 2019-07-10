@@ -68,5 +68,4 @@ public class RankingsActivity extends AppCompatActivity {
         queue.add(jsonObjectRequest);
 
     }
-
 }

@@ -52,19 +52,13 @@ public class RankingsAdapter extends RecyclerView.Adapter<RankingsAdapter.ViewHo
             final String id = element.getString("id");
             holder.first_line.setText(name);
             holder.second_line.setText(username);
-            //holder.container.setOnClickListener(new View.OnClickListener(){
-
-
-                //@Override public void onClick(View v) {
-                    //Intent goToMessage = new Intent(context,ProfileActivity.class);
-                    //goToMessage.putExtra("user_from_id",userFromId);
-                    //goToMessage.putExtra("user_to_id",id);
-                    //goToMessage.putExtra("username", username);
-                    //context.startActivity(goToMessage);
-                //}
-            //});
-
-
+            holder.container.setOnClickListener(new View.OnClickListener(){
+                @Override public void onClick(View v) {
+                    Intent intent = new Intent(context,ProfileActivity.class);
+                    intent.putExtra("user_to_id",id);
+                    context.startActivity(intent);
+                }
+            });
         } catch (JSONException e) {
             e.printStackTrace();
         }
