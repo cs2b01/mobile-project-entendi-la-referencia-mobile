@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginTop="15dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,13 +22,191 @@
                 android:text="Subir contenido a la plataforma"
                 android:background="@drawable/corners_username"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/corners_conteiner"
+                android:gravity="center_horizontal">
+                <RadioButton
+                    android:id="@+id/Marvel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Marvel"/>
+
+                <RadioButton
+                    android:id="@+id/StarWars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:buttonTint="@color/colorPrimaryDark"
+
+                    android:text="Star Wars" />
+
+                <RadioButton
+                    android:id="@+id/Anime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anime"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <RadioButton
+                    android:id="@+id/Deportes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="Deportes" />
+
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/corners_conteiner"
+                android:gravity="center_horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/Memes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="Memes"
+                    android:textColor="@color/colorPrimaryDark" />
+            </RadioGroup>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp">
 
-
+            <EditText
+                android:id="@+id/statment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:ems="15"
+                android:hint="Ingresa el enunciado"
+                android:textAlignment="center"
+                android:textColorHint="#79FFC312"
+                android:background="#C83A3939"
+                android:textColor="#FFC312" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:ems="15"
+                android:hint="Ingresa la respuesta correcta"
+                android:textAlignment="center"
+                android:textColorHint="#79FFC312"
+                android:background="#C83A3939"
+                android:textColor="#FFC312" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/wrong1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:ems="15"
+                android:hint="Ingresa una respuesta incorrecta"
+                android:textAlignment="center"
+                android:textColorHint="#79FFC312"
+                android:background="#C83A3939"
+                android:textColor="#FFC312" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/wrong2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:ems="15"
+                android:hint="Ingresa una respuesta incorrecta"
+                android:textAlignment="center"
+                android:textColorHint="#79FFC312"
+                android:background="#C83A3939"
+                android:textColor="#FFC312" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/wrong3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:ems="15"
+                android:hint="Ingresa una respuesta incorrecta"
+                android:textAlignment="center"
+                android:textColorHint="#79FFC312"
+                android:background="#C83A3939"
+                android:textColor="#FFC312" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp">
+
+            <Button
+                android:id="@+id/button_sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:text="ENVIAR PREGUNTA"
+                android:textAlignment="center"
+                android:textColorHint="#79FFC312"
+                android:onClick="Enviarpregunta"
+                android:background="@drawable/corners_buttons"
+                android:textColor="#FFC312" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

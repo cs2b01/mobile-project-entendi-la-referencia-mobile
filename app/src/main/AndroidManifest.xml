@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SubirContenidoActivity"></activity>
+        <activity android:name=".Question_by_category"></activity>
+        <activity android:name=".Category_questions" />
+        <activity android:name=".Aprender" />
+        <activity android:name=".Jugar_x" />
+        <activity android:name=".SubirContenidoActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".RankingsActivity" />
-        <activity android:name=".JugarActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

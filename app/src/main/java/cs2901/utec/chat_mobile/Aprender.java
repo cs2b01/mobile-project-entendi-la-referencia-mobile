@@ -17,49 +17,42 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
-import java.util.Map;
-public class Backup_Contacts extends AppCompatActivity {
+public class Aprender extends AppCompatActivity {
+
     RecyclerView mRecyclerView;
     RecyclerView.Adapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
-        mRecyclerView = findViewById(R.id.main_recycler_view);
-        setTitle("Bienvenido "+getIntent().getExtras().get("username").toString());
+        setContentView(R.layout.activity_aprender);
+        mRecyclerView = findViewById(R.id.main_recycler_view2);
     }
 
     @Override
     protected void onResume(){
         super.onResume();
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        getUsers();
+        getCategories();
     }
 
     public Activity getActivity(){
         return this;
     }
-
-    public void getUsers(){
-        final String userId = getIntent().getExtras().get("user_id").toString();
-        String url = "http://192.168.1.8:8080/users_mobile/"+userId;
+    public void getCategories(){
+        String url = "http://3.130.238.73/categories";
         RequestQueue queue = Volley.newRequestQueue(this);
-        Map<String, String> params = new HashMap();
-        JSONObject parameters = new JSONObject(params);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
                 url,
-                parameters,
+                null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray data = response.getJSONArray("data");
-                            //mAdapter = new RankingsAdapter(data, getActivity(), userId);
+                            mAdapter = new AprenderAdapter(data, getActivity());
                             mRecyclerView.setAdapter(mAdapter);
-
                         }catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -70,11 +63,9 @@ public class Backup_Contacts extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 // TODO: Handle error
                 error.printStackTrace();
-
             }
         });
         queue.add(jsonObjectRequest);
 
     }
-
 }

@@ -1,11 +1,9 @@
 package cs2901.utec.chat_mobile;
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-
-import java.lang.*;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -14,7 +12,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -33,7 +30,7 @@ public class ProfileActivity extends AppCompatActivity{
     public void getInformation(){
         final String id = getIntent().getExtras().get("user_to_id").toString();
         final int uID = Integer.parseInt(id);
-        String url = "http://3.130.41.244/user_mobile/<xid>";
+        String url = "http://3.130.238.73/user_mobile/<xid>";
         url = url.replace("<xid>", id);
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonObjectRequest request = new JsonObjectRequest(

@@ -40,7 +40,7 @@ public class RankingsActivity extends AppCompatActivity {
     }
 
     public void getUsers(){
-        String url = "http://3.130.41.244/rankings_record";
+        String url = "http://3.130.238.73/rankings_record";
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,

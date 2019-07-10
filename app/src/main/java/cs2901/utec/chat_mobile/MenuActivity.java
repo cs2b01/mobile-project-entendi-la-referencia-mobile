@@ -2,24 +2,10 @@ package cs2901.utec.chat_mobile;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +20,21 @@ public class MenuActivity extends AppCompatActivity {
         super.onResume(); }
 
 
-        public void Jugarx(View v) {
+    public void Jugarx(View v) {
         Jugar();
     }
-
     public void Jugar(){
-        Intent intent = new Intent(getActivity(), JugarActivity.class);
+        Intent intent = new Intent(getActivity(), Jugar_x.class);
+        intent.putExtra("user_id", getIntent().getExtras().get("user_id").toString());
+        intent.putExtra("username", getIntent().getExtras().get("username").toString());
+        startActivity(intent);
+    }
+
+    public void Aprenderx(View v) {
+        Aprender();
+    }
+    public void Aprender(){
+        Intent intent = new Intent(getActivity(), Aprender.class);
         intent.putExtra("user_id", getIntent().getExtras().get("user_id").toString());
         intent.putExtra("username", getIntent().getExtras().get("username").toString());
         startActivity(intent);
