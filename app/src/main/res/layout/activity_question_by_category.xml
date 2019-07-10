@@ -36,8 +36,8 @@
                 android:layout_height="wrap_content"
                 android:text="Enunciado"
                 android:textAlignment="center"
-                android:background="@drawable/corners_buttons"
-                android:textColor="#FFC312" />
+                android:background="@drawable/corners_buttons_w"
+                android:textColor="#FFF" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,8 +64,8 @@
                 android:layout_height="wrap_content"
                 android:text="Respuesta correcta"
                 android:textAlignment="center"
-                android:background="@drawable/corners_buttons"
-                android:textColor="#FFC312" />
+                android:background="@drawable/corners_buttons_w"
+                android:textColor="#FFF"  />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
